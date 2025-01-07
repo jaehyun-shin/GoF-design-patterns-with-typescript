@@ -71,7 +71,7 @@ Branch 실습환경 참조
 
 Aggregator의 구성 데이터를 가져와야할 때 Aggregator의 종류에 따라서 그 방법이 다르다. 내부 자료구조와 종류가 모두 다르기 때문이다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/eacaa6e9-3a40-4708-ad5c-bba8793d30da/2b55df5a-aff0-4ba2-88e1-bb2e438f1d97/image.png)
+![IteratorUML.png](./Images/IteratorUML.png)
 
 ## 정리
 
@@ -88,7 +88,7 @@ Aggregator의 구성 데이터를 가져와야할 때 Aggregator의 종류에 �
 - 상태 패턴과 유사하나, 전략 패턴은 자신의 전략을 스스로 바꿀 수 없다.
 - 전략 객체가 간단한 경우 람다함수로 만들어 사용하면 편리하다.
 
-![Strategy UML.png](./Images/Strategy_UML.png)
+![StrategyUML.png](./Images/StrategyUML.png)
 
 SumPrinter는 인자를 받아 stategy를 사용한다. stategy interface를 상속받은 LoopSumStragy와 GaussSumStrategy는 똑같은 기능을 수행하는 두 개의 다른 알고리즘이다. SumPrinter는 두 알고리즘을 골라서 사용할 수 있는 것이다.
 

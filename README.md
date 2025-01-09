@@ -104,7 +104,7 @@ SumPrinter는 인자를 받아 stategy를 사용한다. stategy interface를 상
 
 일련의 과정들(실행 순서 )을 부모 클래스의 메서드로 만들어 두고, 달라지는 부분만 자식 클래스에서 재정의하는 패턴.
 
-![TemplateMethodUML.png](Images\TemplateMethodUML.png)
+![TemplateMethodUML.png](Images/TemplateMethodUML.png)
 
 Article에는 읽기와 수정 기능이 있다. DisplayArticleTemplate 매서드를 만든다. 이 매서드는 추상 클래스로 각 읽기와 수정에 대한 기능을 구체적으로 구현하지 않는다. 읽기 기능은 SimpleDisplayArticle에서 수정은 EditableDisplayArticle 클래스에서 구체적으로 구현한다.
 

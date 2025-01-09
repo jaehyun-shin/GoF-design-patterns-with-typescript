@@ -71,7 +71,7 @@ Branch 실습환경 참조
 
 Aggregator의 구성 데이터를 가져와야할 때 Aggregator의 종류에 따라서 그 방법이 다르다. 내부 자료구조와 종류가 모두 다르기 때문이다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/eacaa6e9-3a40-4708-ad5c-bba8793d30da/2b55df5a-aff0-4ba2-88e1-bb2e438f1d97/image.png)
+![IteratorUML.png](Images/IteratorUML.png)
 
 ## 정리
 
@@ -88,7 +88,7 @@ Aggregator의 구성 데이터를 가져와야할 때 Aggregator의 종류에 �
 - 상태 패턴과 유사하나, 전략 패턴은 자신의 전략을 스스로 바꿀 수 없다.
 - 전략 객체가 간단한 경우 람다함수로 만들어 사용하면 편리하다.
 
-![Strategy UML.png](./Images/Strategy_UML.png)
+![StrategyUML.png](Images/StrategyUML.png)
 
 SumPrinter는 인자를 받아 stategy를 사용한다. stategy interface를 상속받은 LoopSumStragy와 GaussSumStrategy는 똑같은 기능을 수행하는 두 개의 다른 알고리즘이다. SumPrinter는 두 알고리즘을 골라서 사용할 수 있는 것이다.
 
@@ -97,6 +97,22 @@ SumPrinter는 인자를 받아 stategy를 사용한다. stategy interface를 상
 - Strategy 패턴은 어떤 기능에 대한 특정 알고리즘을 느슨하게 결합시켜주는 패턴이다.
 - 알고리즘이 느슨하게 결합되면 추후 더 나은 알고리즘으로 쉽게 변경할 수 있을 뿐만 아니라 프로그램 실행 중에 상황에 맞는 알고리즘으로 쉽게 변경할 수 있다.
 - 기존의 알고리즘을 유지하면서 새로운 알고리즘을 효과적으로 추가할 수 있다.
+
+---
+
+# Template Method (서식 메서드) 패턴
+
+일련의 과정들(실행 순서 )을 부모 클래스의 메서드로 만들어 두고, 달라지는 부분만 자식 클래스에서 재정의하는 패턴.
+
+![TemplateMethodUML.png](Images\TemplateMethodUML.png)
+
+Article에는 읽기와 수정 기능이 있다. DisplayArticleTemplate 매서드를 만든다. 이 매서드는 추상 클래스로 각 읽기와 수정에 대한 기능을 구체적으로 구현하지 않는다. 읽기 기능은 SimpleDisplayArticle에서 수정은 EditableDisplayArticle 클래스에서 구체적으로 구현한다.
+
+## 정리
+
+- Template Method 패턴은 어떤 기능을 구성하는 각 실행 순서(단계)를 미리 정하고 각 실행 단계에 대한 구체적인 코드를 재정의할 수 있는 유연성을 제공한다.
+- 대부분 공통인데 일부 기능만 다른 경우 활용하기 좋다.
+- 가독성이 떨어지는 것이 단점.
 
 ---
 
